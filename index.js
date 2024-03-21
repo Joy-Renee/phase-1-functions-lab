@@ -22,9 +22,6 @@ distanceFromHqInBlocks(34)
 //distance in feet
 const FeetNo = 264
 
-
-
-
 function distanceFromHqInFeet(DistToHq){
    
     if(DistToHq < HqBlocks){
@@ -103,7 +100,7 @@ calculatesFarePrice(34, 32)
 calculatesFarePrice(50, 58)
 calculatesFarePrice(34, 23)
 
-console.log(calculatesFarePrice(43, 44))
-console.log(calculatesFarePrice(34, 32))
-console.log(calculatesFarePrice(50, 58))
-console.log(calculatesFarePrice(34, 23))
+//console.log(calculatesFarePrice(43, 44))
+//console.log(calculatesFarePrice(34, 32))
+//console.log(calculatesFarePrice(50, 58))
+//console.log(calculatesFarePrice(34, 23))
