@@ -7,12 +7,13 @@ function distanceFromHqInBlocks(DistToHq){
 
         //console.log(Tblock)
         return Tblock
-    }
+    }else if(DistToHq >= HqBlocks){ 
 
-    let TblockS = DistToHq - HqBlocks 
+   // let TblockS = DistToHq - HqBlocks 
     
     //console.log(TblockS)
-    return TblockS 
+    return DistToHq - HqBlocks 
+}
 }
 
 distanceFromHqInBlocks(43)
@@ -53,10 +54,13 @@ function distanceTravelledInFeet(start, destination){
         let TravelFeet = diSt * 264
         return TravelFeet
     }
+    else if(start < destination){
+        let diSt = destination - start
+        let TravelFeet = diSt * 264
+        return TravelFeet
+    }
 
-    let diSt = destination - start
-    let TravelFeet = diSt * 264
-    return TravelFeet
+    
     
 }
 
@@ -72,29 +76,24 @@ distanceTravelledInFeet(34, 28)
 
 function calculatesFarePrice(start, destination){
 
-    let subTract = start - destination 
-    let distTravel = subTract * 264 
+    
+    let distTravel =  distanceTravelledInFeet(start, destination)
 
     if(distTravel <= 400){
         return 0;
-
     }
     else if(distTravel > 400 && distTravel <= 2000){
         const miNus = distTravel - 400
         const proDuct = miNus * 0.02
         return proDuct ;
-
     }
     else if(distTravel > 2000 && distTravel <= 2500){
         return 25;
-
     }
     else{
         return 'cannot travel that far';
     }
-
 }
-
 calculatesFarePrice(43, 44)
 calculatesFarePrice(34, 32)
 calculatesFarePrice(50, 58)
